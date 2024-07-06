@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="icons8-english-48.png" type="image/.png" />
+    <!-- Loading The Bootstrap Library -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Loading Icons From Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <!-- Linking Your CSS File -->
+    <link rel="stylesheet" href="" />
+
+    <!-- Loading Roboto Font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Loading Open Sans Font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&family=Anton&family=Edu+TAS+Beginner&family=Gabarito&family=Poppins:ital,wght@1,300&family=Roboto+Condensed:ital@1&family=Roboto+Mono:ital,wght@1,500&family=Tilt+Neon&family=Young+Serif&display=swap");
+      body {
+        width: 100%;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+      }
+      li {
+        list-style: none;
+      }
+      .container {
+        display: flex;
+        flex-basis: 100%;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .header {
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        flex-basis: 100%;
+        background-color: rgb(249, 249, 249);
+      }
+      .img {
+        flex-basis: 7%;
+        margin-right: 3px;
+        margin-left: 100px;
+      }
+      .image {
+        width: 200px;
+        height: 100px;
+      }
+      .list {
+        flex-basis: 90%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-overflow: hidden;
+      }
+      .list-r {
+        font-size: 150%;
+        padding-right: 5%;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        font-family: "Tilt Neon", Arial, Helvetica, sans-serif;
+      }
+      .list-r:hover .links {
+        color: indigo;
+        text-decoration-color: indigo;
+      }
+      .links {
+        color: rgb(109, 103, 103);
+        text-overflow: hidden;
+      }
+      .links:hover {
+        color: indigo;
+        text-decoration-color: indigo;
+      }
+      .hidden {
+        display: none;
+        width: 200px;
+        position: absolute;
+        top: 100px;
+        background-color: white;
+        z-index: 1;
+      }
+      .list-r:hover {
+        text-decoration: underline;
+        border-top-color: black;
+        color: indigo;
+        text-decoration-color: indigo;
+      }
+      .list-r:hover .hidden {
+        display: block !important;
+      }
+      .hid_l {
+        font-size: large;
+        font-family: "Gabarito", Verdana, Geneva, Tahoma, sans-serif;
+        color: blueviolet;
+        padding: 5px 5px 5px 5px;
+      }
+      .hid_l:hover {
+        background-color: rgb(208, 216, 223);
+        color: darkmagenta;
+        text-decoration: underline;
+      }
+      .cont_2 {
+        display: flex;
+        flex-basis: 100%;
+        background-color: black;
+        overflow: hidden;
+      }
+      .cont_2_1 {
+        flex-basis: 50%;
+        margin-top: 50px;
+        color: white;
+        font-weight: 10;
+        height: 150px;
+        text-align: center;
+        font-size: x-large;
+        font-family: "Poppins", sans-serif;
+      }
+      .txt {
+        font-family: "Edu TAS Beginner", cursive;
+        color: white;
+        font-weight: 900;
+        font-size: xx-large;
+        z-index: 1;
+      }
+      .cont_2_1_2 {
+        font-size: large;
+        color: rgb(86, 105, 228);
+        font-family: "Poppins", monospace;
+      }
+      .cont_2_2 {
+        flex-basis: 50%;
+        font-size: large;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sprt:hover {
+        background-color: transparent;
+        padding-top: 1px;
+      }
+      .btn {
+        font-size: large;
+        padding: 8px 8px 8px 8px;
+        background-color: rgba(3, 3, 81, 0.8);
+        color: white;
+      }
+      .btn:hover {
+        text-decoration: underline;
+        background-color: rgba(3, 3, 81, 1);
+        color: blueviolet;
+      }
+      .learn {
+        font-size: x-large;
+        color: white;
+      }
+      .learn:hover {
+        background-color: black;
+      }
+      .cont_3 {
+        display: flex;
+        flex-basis: 100%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 10%;
+        background-color: rgba(191, 187, 255, 0.39);
+      }
+      #changing-text {
+        background-color: #212529;
+        padding: 10px;
+        font-weight: 1000;
+        color: rgb(255, 255, 255);
+        font-family: "Gabarito";
+        font-size: 3rem;
+      }
+
+      .cont_3_1_0 {
+        text-align: center;
+      }
+      .cont_3_1_1 {
+        font-family: "Poppins";
+        font-size: xx-large;
+        font-weight: 1000;
+      }
+      .cont_3_1_2 {
+        text-align: center;
+        padding-top: 10px;
+        font-size: x-large;
+        font-style: italic;
+        font-family: "Gabarito";
+        color: rgb(98, 101, 101);
+      }
+      .cont_3_3 {
+        display: flex;
+        flex-basis: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      .cont_3_0 {
+        display: flex;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        padding-bottom: 5%;
+        background-color: rgba(191, 187, 255, 0.39);
+      }
+      .cont_3_2 {
+        display: flex;
+        flex-basis: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      .box {
+        display: flex;
+        flex-basis: 26%;
+        margin-left: 4%;
+        margin-right: 4%;
+        flex-direction: column;
+        height: 300px;
+        margin-top: 5%;
+        margin-bottom: 3%;
+        background-color: white;
+        box-shadow: 0 5px 0 rgba(60, 0, 255, 0.688);
+        border-radius: 3%;
+      }
+      .box_ {
+        display: flex;
+        flex-basis: 5%;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 80px;
+        width: 80px;
+      }
+      .box_1 {
+        flex-basis: 20%;
+        padding-left: 1px;
+        padding-right: 1px;
+        text-align: center;
+        font-size: xx-large;
+        font-family: "Tilt Neon", Arial, Helvetica, sans-serif;
+      }
+      .box_1link {
+        color: darkmagenta;
+      }
+      .box_1link:hover {
+        color: darkmagenta;
+      }
+      .box_2 {
+        flex-basis: 20%;
+        padding-left: 2px;
+        padding-right: 2px;
+        text-align: center;
+        font-size: x-large;
+        font-family: "Gabarito", Cambria, Cochin, Georgia, Times,
+          "Times New Roman", serif;
+        color: darkorchid;
+      }
+      .box_img {
+        height: 80px;
+        position: relative;
+        padding: 13px;
+        top: -35px;
+        border-radius: 50%;
+        background: rgb(22, 22, 233);
+        background: linear-gradient(
+          90deg,
+          rgb(73, 4, 80) 0%,
+          rgb(122, 37, 141) 50%,
+          rgb(89, 43, 100) 100%
+        );
+      }
+      .box:hover .box_img {
+        outline-style: outset;
+        outline-offset: 8px;
+        outline-width: 5px;
+        outline: 50%;
+        outline-color: blueviolet;
+        transition-duration: 500ms;
+      }
+      .cont_4 {
+        display: flex;
+        flex-basis: 100%;
+        margin-top: 5%;
+        align-content: center;
+      }
+      #body {
+        transition: 0.5s;
+        transition-timing-function: ease-in;
+        background-image: linear-gradient(
+          to right bottom,
+          #ed4264a8,
+          #ffedbca8
+        );
+      }
+
+      .quote-box {
+        padding: 3rem;
+        transition: 0.5s;
+        transition-timing-function: ease-in;
+      }
+
+      .text {
+        font-size: 30px;
+        padding-left: 10px;
+        transition: 0.5s;
+        transition-timing-function: ease-in;
+        font-family: "Roboto", sans-serif;
+        background-image: linear-gradient(
+          to right bottom,
+          #ed4264a8,
+          #ffedbca8
+        );
+        color: transparent;
+        -webkit-background-clip: text;
+      }
+
+      .quote {
+        transition: 0.5s;
+        transition-timing-function: ease-in;
+      }
+
+      .new-quote {
+        font-size: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        padding-bottom: 8px;
+        padding-top: 9px;
+        margin-top: 5px;
+        background-image: linear-gradient(
+          to right bottom,
+          #ed4264a8,
+          #ffedbca8
+        );
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .new-quote:hover {
+        opacity: 0.6;
+      }
+
+      .author {
+        margin: 10px;
+        font-size: 20px;
+        transition: 0.5s;
+        transition-timing-function: ease-in;
+        font-family: "Open Sans Condensed", sans-serif;
+        background-image: linear-gradient(to right bottom, #28313b, #485461);
+        color: transparent;
+        -webkit-background-clip: text;
+      }
+
+      p {
+        margin-top: 5px;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        top: 21.5%;
+      }
+
+      .block {
+        perspective: 150rem;
+      }
+
+      .block__main {
+        min-width: 45vw;
+        position: absolute;
+        transition: all 0.8s ease;
+        backface-visibility: hidden;
+        box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        border-radius: 0.5rem;
+        background-image: linear-gradient(to right bottom, #f6f0ea, #f1dfd1);
+      }
+
+      .block__back {
+        transform: rotateY(180deg);
+      }
+
+      .rotateF {
+        transform: rotateY(-180deg);
+      }
+
+      .rotateB {
+        transform: rotateY(0deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="header" id="myHeader">
+        <div class="img" id="image">
+          <img src="RT-Lettering Shop _ Redbubble.jpeg" class="image" />
+        </div>
+        <ul class="list">
+          <li class="list-r">
+            <a href="#" class="links">LEARN ENGLISH</a>
+            <div class="hidden">
+              <ul class="hid_ul">
+                <li class="hid_li"><a href="#" class="hid_l">Home</a></li>
+                <li class="hid_li"><a href="#" class="hid_l">About Us</a></li>
+                <li class="hid_li">
+                  <a href="#" class="hid_l">English Lesson</a>
+                </li>
+                <li class="hid_li">
+                  <a href="#" class="hid_l">English Basic</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="list-r"><a href="#" class="links">GRAMMAR</a></li>
+          <li class="list-r"><a href="#" class="links">READ</a></li>
+          <li class="list-r">
+            <a href="#" class="links">VOCABULARY</a>
+            <div class="hidden">
+              <ul class="hid_ul">
+                <li class="hid_li">
+                  <a href="#" class="hid_l">Vocabulary By Topic</a>
+                </li>
+                <li class="hid_li">
+                  <a href="#" class="hid_l">Songs BY Topic</a>
+                </li>
+                <li class="hid_li"><a href="#" class="hid_l">Dictionary</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="cont_2">
+        <div class="cont_2_1">
+          <div class="cont_2_1_1">
+            One of the most effective way to improve
+            <span class="txt">English</span>
+          </div>
+          <div class="cont_2_1_2">
+            Explore a bit to find more about us. If you like what we do,<a
+              href="#"
+              class="hid_l sprt"
+              >support us</a
+            >
+          </div>
+        </div>
+        <div class="cont_2_2">
+          <button class="btn">Get Involved Now</button>...or
+          <a href="#" rel="noopener noreferrer" class="hid_l learn"
+            >learn more.</a
+          >
+        </div>
+      </div>
+      <div class="cont_3">
+        <div class="cont_3_1_1 cont_3_1_0">
+          <span id="changing-text" class="cont_3_1_1"></span>&nbsp;you can learn
+          English for free!
+        </div>
+        <div class="cont_3_1_2">
+          The Learn English Network has been helping people to learn English for
+          free since 1999!
+        </div>
+      </div>
+      <div class="cont_3_0">
+        <div class="cont_3_2">
+          <div class="box">
+            <div class="box_">
+              <a href="#">
+                <img
+                  src="icons8-open-book-64.png"
+                  alt="Open Book"
+                  class="box_img"
+                />
+              </a>
+            </div>
+            <div class="box_1"><a href="" class="box_1link">Dictionary</a></div>
+            <div class="box_2">Your Guide to Dictionary</div>
+          </div>
+          <div class="box">
+            <div class="box_">
+              <a href="#">
+                <img
+                  src="icons8-study-100.png"
+                  alt="Open Book"
+                  class="box_img"
+                />
+              </a>
+            </div>
+            <div class="box_1"><a href="" class="box_1link">Dictionary</a></div>
+            <div class="box_2">Your Guide to Dictionary</div>
+          </div>
+          <div class="box">
+            <div class="box_">
+              <a href="#">
+                <img
+                  src="icons8-pronunciation-100.png"
+                  alt="Open Book"
+                  class="box_img"
+                />
+              </a>
+            </div>
+            <div class="box_1"><a href="" class="box_1link">Dictionary</a></div>
+            <div class="box_2">Your Guide to Dictionary</div>
+          </div>
+        </div>
+        <div class="cont_3_3">
+          <div class="box">
+            <div class="box_">
+              <a href="#">
+                <img
+                  src="icons8-foreign-language-sound-100.png"
+                  alt="Open Book"
+                  class="box_img"
+                />
+              </a>
+            </div>
+            <div class="box_1"><a href="" class="box_1link">Dictionary</a></div>
+            <div class="box_2">Your Guide to Dictionary</div>
+          </div>
+          <div class="box">
+            <div class="box_">
+              <a href="#">
+                <img
+                  src="icons8-blog-128.png"
+                  alt="Open Book"
+                  class="box_img"
+                />
+              </a>
+            </div>
+            <div class="box_1"><a href="" class="box_1link">Dictionary</a></div>
+            <div class="box_2">Your Guide to Dictionary</div>
+          </div>
+          <div class="box">
+            <div class="box_">
+              <a href="#">
+                <img
+                  src="icons8-games-64.png"
+                  alt="Open Book"
+                  class="box_img"
+                />
+              </a>
+            </div>
+            <div class="box_1"><a href="" class="box_1link">Dictionary</a></div>
+            <div class="box_2">Your Guide to Dictionary</div>
+          </div>
+        </div>
+      </div>
+      <div class="cont_4">
+        <div id="body">
+          <div>
+            <!-- Quote Box -->
+            <div class="block text-center">
+              <!-- Front part of the Quote Box -->
+              <div class="quote-box block__main block__front">
+                <!-- Quote to be Displayed Here -->
+                <span class="quote">
+                  <!-- Hyphen is Displayed -->
+                  <i class="fas fa-2x fa-quote-left"></i>
+
+                  <!-- Quote Text -->
+                  <span class="text"> Quote To be Displayed Here </span>
+                </span>
+
+                <!-- Author to be Displayed Here -->
+                <div class="author">Author to be Displayed Here</div>
+                <a class="new-quote btn btn-default" onclick="newQuote()"
+                  >New Quote</a
+                >
+              </div>
+
+              <!-- Back Part of the Quote Box -->
+              <div class="quote-box block__main block__back">
+                <!-- Quote to be Displayed Here -->
+                <span class="quote">
+                  <!-- Hyphen is Displayed -->
+                  <i class="fas fa-2x fa-quote-left"></i>
+
+                  <!-- Quote Text -->
+                  <span class="text"> Quote To be Displayed Here </span>
+                </span>
+
+                <!-- Author to be Displayed Here -->
+                <div class="author">Author to be Displayed Here</div>
+                <!-- Button -->
+                <a class="new-quote btn btn-default" onclick="newQuote()"
+                  >New Quote</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var text = [
+        "Amazingly",
+        "Incredibly",
+        "Astonishingly",
+        "Believe it or not",
+      ];
+      var counter = 0;
+      var elem = document.getElementById("changing-text");
+      setInterval(change, 1500);
+
+      function change() {
+        elem.innerHTML = text[counter];
+        counter++;
+        if (counter >= text.length) {
+          counter = 0;
+        }
+      }
+
+      // <!-- header -->
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50
+        ) {
+          document.getElementById("myHeader").style.fontSize = "75%";
+          document.getElementById("myHeader").style.padding = "0px 0px";
+          document.getElementById("myHeader").style.transitionDuration =
+            "100ms";
+          document.getElementsByClassName("list-r").style.paddingBottom = "2px";
+        } else {
+          document.getElementById("myHeader").style.fontSize = "125%";
+          document.getElementById("myHeader").style.padding = "0px 0px";
+        }
+      }
+      // Global Variable used to store the quotes
+      // fetched from the API
+      var data;
+      let front = true;
+
+      // Getting the front and the back author boxes
+      const authors = document.querySelectorAll(".author");
+
+      // Getting the front and the back texts
+      const texts = document.querySelectorAll(".text");
+
+      // Getting the body
+      const body = document.getElementById("body");
+
+      // Getting the buttons
+      const button = document.querySelectorAll(".new-quote");
+
+      const blockFront = document.querySelector(".block__front");
+      const blockBack = document.querySelector(".block__back");
+
+      const authorFront = authors[0];
+      const authorBack = authors[1];
+
+      const textFront = texts[0];
+      const textBack = texts[1];
+
+      const buttonFront = button[0];
+      const buttonBack = button[1];
+
+      // An arrow function used to get a quote randomly
+      const displayQuote = () => {
+        // Generates a random number between 0
+        // and the length of the dataset
+        let index = Math.floor(Math.random() * data.length);
+
+        // Stores the quote present at the randomly generated index
+        let quote = data[index].text;
+
+        // Stores the author of the respective quote
+        let author = data[index].author;
+
+        // Making the author anonymous if no author is present
+        if (!author) {
+          author = "Anonymous";
+        }
+
+        // Replacing the current quote and the author with a new one
+
+        if (front) {
+          // Changing the front if back-side is displayed
+          textFront.innerHTML = quote;
+          authorFront.innerHTML = author;
+        } else {
+          // Changing the back if front-side is displayed
+          textBack.innerHTML = quote;
+          authorBack.innerHTML = author;
+        }
+
+        front = !front;
+      };
+
+      // Fetching the quotes from the type.fit API using promises
+      fetch("https://type.fit/api/quotes")
+        .then(function (response) {
+          return response.json();
+        }) // Getting the raw JSON data
+        .then(function (data) {
+          // Storing the quotes internally upon
+          // successful completion of request
+          this.data = data;
+
+          // Displaying the quote When the Webpage loads
+          displayQuote();
+        });
+
+      // Adding an onclick listener for the button
+      function newQuote() {
+        // Rotating the Quote Box
+        blockBack.classList.toggle("rotateB");
+        blockFront.classList.toggle("rotateF");
+
+        // Displaying a new quote when the webpage loads
+        displayQuote();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Quote Generator</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+      #quote {
+        font-size: 24px;
+        text-align: center;
+      }
+      #button {
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin: 20px auto;
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="quote">Click the button to generate a quote</div>
+    <div id="button">Generate Quote</div>
+
+    <script>
+      var quotes = [
+        "The only thing we have to fear is fear itself. - Franklin D. Roosevelt",
+        "The journey of a thousand miles begins with one step. - Lao Tzu",
+        "That which does not kill us makes us stronger. - Friedrich Nietzsche",
+        // ...
+        // Add more quotes here
+        // ...
+        "In three words I can sum up everything I've learned about life: it goes on. - Robert Frost",
+        "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment. - Ralph Waldo Emerson",
+        "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. - Albert Einstein",
+        "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful. - Albert Schweitzer",
+        "Believe you can and you're halfway there. - Theodore Roosevelt",
+        "Do not go where the path may lead, go instead where there is no path and leave a trail. - Ralph Waldo Emerson",
+        "Life is really simple, but we insist on making it complicated. - Confucius",
+        "The only true wisdom is in knowing you know nothing. - Socrates",
+        "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+        "Keep your eyes on the stars, and your feet on the ground. - Theodore Roosevelt",
+        "It's not what happens to you, but how you react to it that matters. - Epictetus",
+        "The only way to do great work is to love what you do. - Steve Jobs",
+        "Difficulties in life are intended to make us better, not bitter. - Dan Reeves",
+        "Change your thoughts and you change your world. - Norman Vincent Peale",
+        "Only a life lived for others is a life worthwhile. - Albert Einstein",
+        "Peace begins with a smile. - Mother Teresa",
+        "Success is not just about making money. It's about making a difference. - Unknown",
+        "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+        "Opportunities don't happen. You create them. - Chris Grosser",
+        "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+        "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+        "Success is not in what you have, but who you are. - Bo Bennett",
+        "Try not to become a man of success. Rather become a man of value. - Albert Einstein",
+        "Success is not just about making money. It's about making a difference. - Unknown",
+        "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+        "Opportunities don't happen. You create them. - Chris Grosser",
+        "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+        "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+        "Success is not in what you have, but who you are. - Bo Bennett",
+        "Try not to become a man of success. Rather become a man of value. - Albert Einstein",
+        "Success is not just about making money. It's about making a difference. - Unknown",
+        "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+        "Opportunities don't happen. You create them. - Chris Grosser",
+        "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+        "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+        "Success is not in what you have, but who you are. - Bo Bennett",
+        "Try not to become a man of success. Rather become a man of value. - Albert Einstein",
+        "Success is not just about making money. It's about making a difference. - Unknown",
+        "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+        "Opportunities don't happen. You create them. - Chris Grosser",
+        "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+        "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+        "Success is not in what you have, but who you are. - Bo Bennett",
+        "Try not to become a man of success. Rather become a man of value. - Albert Einstein",
+        "Success is not just about making money. It's about making a difference. - Unknown",
+        "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+        "Opportunities don't happen. You create them. - Chris Grosser",
+        "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+        "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+        "Success is not in what you have, but who you are. - Bo Bennett",
+        "Try not to become a man of success. Rather become a man of value. - Albert Einstein",
+        "Success is not just about making money. It's about making a difference. - Unknown",
+        "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+        "Opportunities don't happen. You create them. - Chris Grosser",
+        "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+        "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+        "Success is not in what you have, but who you are. - Bo Bennett",
+        "Try not to become a man of success. Rather become a man of value. - Albert Einstein",
+        "Success is not just about making money. It's about making a difference. - Unknown",
+        "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+        "Opportunities don't happen. You create them. - Chris Grosser",
+        "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+        "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+        "Success is not in what you have, but who you are. - Bo Bennett",
+        "Try not to become a man of success. Rather become a man of value. - Albert Einstein",
+        "Success is not just about making money. It's about making a difference. - Unknown",
+        "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+        "Opportunities don't happen. You create them. - Chris Grosser",
+        "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+        "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+        "Success is not in what you have, but who you are. - Bo Bennett",
+        "Try not to become a man of success. Rather become a man of value. - Albert Einstein",
+        "Success is not just about making money. It's about making a difference. - Unknown",
+        "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+        "Opportunities don't happen. You create them. - Chris Grosser",
+        "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+        "I find that the harder I work, the more luck I seem to have. - Thomas Jefferson",
+        "Success is not in what you have, but who you are. - Bo Bennett",
+      ];
+
+      document.getElementById("button").addEventListener("click", function () {
+        var randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote").textContent = quotes[randomIndex];
+      });
+    </script>
+  </body>
+</html>

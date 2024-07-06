@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&family=Anton&family=Edu+TAS+Beginner&family=Ephesis&family=Gabarito&family=Poppins:ital,wght@1,300&family=Roboto+Condensed:ital@1&family=Roboto+Mono:ital,wght@1,500&family=Tilt+Neon&family=Young+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+}
+
+.header {
+  color: white;
+  text-align: center;
+  line-height: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.headimg {
+  color: white;
+  width: 500px;
+  height: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.topic {
+  max-width: 80vw;
+  padding: 1rem 1rem;
+  margin: 0px auto;
+}
+.gram {
+  margin-top: 50px;
+}
+.ram {
+  font-family: cursive;
+  font-size: 50px;
+}
+.am {
+  margin-top: 50px;
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 500;
+}
+.main {
+  display: grid;
+  gap: 7rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 340px));
+  justify-content: center;
+}
+
+.image {
+  position: relative;
+  overflow: hidden;
+  height: 14rem;
+  width: 400px;
+}
+.topic-name {
+  font-style: italic;
+  font-family: cursive;
+  font-size: x-large;
+}
+.description {
+  color: white;
+  font-size: 20px;
+  font-family: "Tilt Neon", sans-serif;
+}
+.link {
+  color: blueviolet;
+}
+.link:hover {
+  color: darkmagenta;
+  text-decoration: underline;
+}
